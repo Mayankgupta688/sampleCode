@@ -1,6 +1,4 @@
-angular.module('main', ['n3-pie-chart','apojop'])
-
-.controller('HomeCtrl', function($scope,$http,$filter) {
+angular.module('main').controller('HomeCtrl', function($scope, $http, $filter) {
 
   $scope.apps = [];
   
@@ -14,7 +12,7 @@ angular.module('main', ['n3-pie-chart','apojop'])
     {label: "four", value: 50, color: colors(3)}
   ];
 
-  $scope.options = {thickness: 15};
+  $scope.options = {thickness: 25};
 
   $scope.mySortFunction = function(item) {
       if(isNaN(item[$scope.sortExpression]))
@@ -66,9 +64,8 @@ angular.module('main', ['n3-pie-chart','apojop'])
       // called asynchronously if an error occurs
       // or server returns response with an error status.
     });
-$scope.pricedData=[];
+
+  $scope.pricedData=[];
 
 
-})
-
-;
+});

@@ -3,7 +3,6 @@
 <html lang="en" ng-app="main">
 <head>
   <link href="css/app.css" rel="stylesheet" type="text/css" />  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link href="css/bootstrap.min.css" rel="stylesheet">  
   <title>Top 100 iOS apps</title>
 </head>
@@ -48,7 +47,7 @@
   </div>
   <br/>  
   <div class="row">
-    <div class="col-md-6" ng-repeat="app in apps | orderBy:mySortFunction | filter:q " >
+    <div class="col-lg-12" ng-repeat="app in apps | orderBy:mySortFunction | filter:q " >
         <img src="{{app.thumb}}" style="float:left">
         <p>
           {{app.name}}<br/>
@@ -67,4 +66,6 @@
 <script src="js/apojop.min.js"></script>
 <script src="js/pie-chart.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/appScripts/app.js"></script>
+<script src="js/appScripts/mainController.js"></script>
 </html>
